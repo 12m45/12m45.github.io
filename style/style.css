@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 50px;
+  padding: 1rem;
 }
 
 header {
@@ -17,39 +17,50 @@ header h2 {
   font-family: Manrope;
 }
 
-nav {
- 
+/* desktop menu */
 
-  
+
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
+
+header input, 
+header label {
+  display: none;
+}
+
+
+
+li {
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+li a {
+  text-decoration: none;
+}
+
+label img {
+  width: 30px;
+}
+
 
 .nav-container {
   display: flex;
-  
-  
 }
 
-.nav-container p {
-  margin-left: 25px;
-  text-wrap: nowrap;
-  font-weight: bold;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
 
 .hero-section {
  display: flex; 
  justify-content: center;
- 
 }
 
-.right-hero-section {
-  
-}
 
 .hi {
   font-family: Poppins;
-  
 }
 
 .right-hero-section h1 {
@@ -60,7 +71,6 @@ nav {
 
 .right-hero-section h2 {
   font-size: 2.2rem;
-  
 }
 
 .stack-icon-container,  
@@ -70,6 +80,7 @@ nav {
   justify-content: space-between;
   margin-top: 20px;
 }
+
 .stack-icon-container img, 
 .contact-links-container img {
   width: 28px;
@@ -79,14 +90,116 @@ section {
   margin-bottom: 80px;
 }
 
-section h2 {
-  margin-bottom: 10px;
-}
-
 section p {
   margin-bottom: 6px;
 }
 
 section h4 {
   margin-top: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-section h2, 
+.about-me-section h2, 
+.skills-section h2 {
+  margin-bottom: 2rem;
+}
+
+.projects-section p, 
+.about-me-section p, 
+.skills-section p {
+  margin-top: 1rem;
+  line-height: 2.3rem;
+  margin-bottom: 2rem;
+  
+}
+
+.about-me-section p {
+  margin-bottom: 1.5rem;
+}
+/* mobile menu */
+
+@media ((max-width: 768px)) {
+
+  
+
+  header label {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .nav-container ul {
+    display: block;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    transition: all 0.3s;
+    
+    
+  }
+
+  li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .cancel-icon {
+    display: none;
+    width: 26px;
+  }
+
+  body:has(#click:checked) {
+    overflow: hidden;
+  }
+
+
+
+  #click:checked ~ ul {
+    top: 0;
+    right: 0;
+
+    padding: 0;
+    padding-top: 3.5rem;
+    padding-right: 6rem;
+    padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  #click:checked ~ ul li {
+    font-size: 1.3rem;
+    margin-bottom: 3.5rem;
+  }
+
+  #click:checked ~ ul li a {
+    color: wheat;
+  }
+
+   #click:checked ~ label .cancel-icon {
+    display: inline-block;
+    z-index: 99;
+  }
+
+  #click:checked ~ label .menu-icon {
+    display: none;
+  }
+
+  header {
+    margin-bottom: 40px;
+  }
+
+  .right-hero-section h1 {
+    font-size: 4.8rem;
+    line-height: 1.4em;
+    margin-bottom: 1rem;
+  }
+
 }

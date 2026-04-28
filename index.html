@@ -13,17 +13,31 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+  
   <header>
     <h2>dataByBasit</h2>
+    
     <nav>
       <div class="nav-container">
-        <p id="about-me">About Me</p>
-        <p>Projects</p>
-        <p>Skills</p>
-        <p>Contact</p>
+        
+        <input type="checkbox" id="click">
+        <label for="click" class="menu">
+          <img class="menu-icon" src="images/icons/hamburger-menu.svg" alt="menu-icon">
+          <img class="cancel-icon" src="images/icons/x-solid-full.svg" alt="close-icon">
+        </label>
+       
+        <ul>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Skills</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+
+        
       </div>
     </nav>
   </header>
+
   <main>
     
     <section class="hero-section">
@@ -42,7 +56,7 @@
       </div>
       
     </section>
-    <section class="about-me-section">
+    <section class="about-me-section" id="about-me-section">
       <h2>About Me.</h2>
       <p>I am a Computer Science student and developer based in Nigeria, passionate about bridging the gap between technical code and business growth.</p>
       <p>With a background in operations and marketing, I build scalable, user-centric solutions.</p>
@@ -76,10 +90,10 @@
       <h2>Contact</h2>
       <p>Let's build something impactful together.</p>
       <div class="contact-links-container">
-        <a href=""><img src="images/icons/email.svg" alt="Email"></a>
-        <a href=""><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
-        <a href=""><img src="images/icons/github.svg" alt="Github"></a>
-        <a href=""><img src="images/icons/twitter.svg" alt="Twitter"></a>
+        <a href="mailto:0eniolaadeyemi@gmail.com" target="_blank"><img src="images/icons/email.svg" alt="Email"></a>
+        <a href="https://wa.me/2347082658988" target="_blank"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+        <a href="https://github.com/12m45" target="_blank"><img src="images/icons/github.svg" alt="Github"></a>
+        <a href="https://x.com/databybasit" target="_blank"><img src="images/icons/twitter.svg" alt="Twitter"></a>
       </div>
       
     </section>
